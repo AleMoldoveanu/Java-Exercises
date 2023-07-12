@@ -1,2 +1,2 @@
-# my-first-repository
+# JavaExercises
 my new repository
