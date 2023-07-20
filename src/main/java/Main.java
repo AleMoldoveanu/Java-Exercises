@@ -1,2 +1,13 @@
-package PACKAGE_NAME;public class Main {
+public class Main {
+
+    public static void main(String[] args) {
+        //Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
+        //helloName("Bob") -> Hello Bob!
+        System.out.println(JavaStringExercises.helloName("Bob"));
+        //Given an "out" string length 4, such as "<<>>", and a word, return a new string where the word is in the middle of the out string,
+        // e.g. "<<word>>". Note: use str.substring(i, j) to extract the String starting at index i and going up to but not including index j.
+        System.out.println(JavaStringExercises.makeOutWord("<<>>", "WooHoo"));
+        //Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
+        System.out.println(JavaStringExercises.firstHalf("HelloThere"));
+    }
 }
