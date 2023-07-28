@@ -82,5 +82,9 @@ public class Main {
         // However, if the strings are different lengths, omit chars from the longer string so it is the same length as the shorter string.
         // So "Hello" and "Hi" yield "loHi". The strings may be any length.
         System.out.println(JavaStringExercises.minCat("hello", "java"));
+        //Given a string, return a version without the first 2 chars.
+        // Except keep the first char if it is 'a' and keep the second char if it is 'b'. The string may be any length. Harder than it looks.
+        System.out.println(JavaStringExercises.deFront("away"));
+
     }
 }

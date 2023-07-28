@@ -132,9 +132,11 @@ public class JavaStringExercises {
             return str;
         }
     }
+
     public static String makeTags (String tag, String word){
         return "<" + tag + ">" + word + "</" + tag + ">";
     }
+
     public static boolean frontAgain(String str) {
         if (str.length() >=2 && (str.substring(0,2).equals(str.substring(str.length()-2)))) {
             return true;
@@ -142,11 +144,13 @@ public class JavaStringExercises {
             return false;
         }
     }
+
     public static String without2(String str) {
         if (str.substring(0,2).equals(str.substring(str.length()-2)));{
             return str.substring(2);
         }
     }
+
     public static String withoutX(String str) {
         if (str.length() >=2 && str.substring(0,1).equals("x") && str.substring(str.length()-1).equals("x")){
             return str.substring (1, str.length()-1);
@@ -160,6 +164,7 @@ public class JavaStringExercises {
             return str;
         }
     }
+
     public static String comboString(String a, String b) {
         if (a.length() < b.length()) {
             return a + b + a;
@@ -167,17 +172,20 @@ public class JavaStringExercises {
             return b + a + b;
         }
     }
+
     public static String right2(String str) {
         if (str.length() >=2){
             return str.substring(str.length()-2) + str.substring(0,str.length()-2);
         }
         return str;
     }
+
     public static String middleTwo(String str) {
         int middleIndex = str.length() / 2;
         String middleChars = str.substring(middleIndex - 1, middleIndex + 1);
         return middleChars;
     }
+
     public static String twoChar(String str, int index) {
         if (index < 0 || index + 1 >= str.length()){
             return str.substring(0, 2);
@@ -185,6 +193,7 @@ public class JavaStringExercises {
             return str.substring(index, index + 2);
         }
     }
+
     public static String atFirst(String str) {
         if (str.length() >= 2 ){
             return str.substring(0,2);
@@ -193,6 +202,7 @@ public class JavaStringExercises {
             return str.length() == 1 ? str + missingChars.charAt(1) : missingChars;
         }
     }
+
     public static String lastTwo(String str) {
         if (str.length() < 2){
             return str;
@@ -202,9 +212,8 @@ public class JavaStringExercises {
             return str.substring(0, str.length() - 2) + lastChar + secondLastChar;
         }
     }
-    public static String minCat(String a, String b) {
 
-        //minCat("Hello", "Hi") → "loHi"
+    public static String minCat(String a, String b) {
         if (a.length() < b.length()){
             return a + b.substring(b.length()-a.length());
         } else if (b.length() < a.length()){
@@ -213,6 +222,21 @@ public class JavaStringExercises {
             return a + b;
         }
     }
+
+    public static String deFront(String str) {
+        if (str.length() <= 2){
+            return "";
+        }else if (str.charAt(0) == 'a' && str.charAt(1) == 'b'){
+            return str.substring (0,2) + str.substring (2);
+        }else if (str.charAt(0) == 'a') {
+            return str.substring (0,1) + str.substring(2);
+        }else if (str.charAt(1) == 'b'){
+            return str.substring(1);
+        }else {
+            return str.substring(2);
+        }
+    }
+
 }
 
 
