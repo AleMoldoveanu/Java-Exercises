@@ -56,7 +56,7 @@ public class Main {
         //The web is built with HTML strings like "<i>Yay</i>" which draws Yay as italic text.
         // In this example, the "i" tag makes <i> and </i> which surround the word "Yay".
         // Given tag and word strings, create the HTML string with tags around the word, e.g. "<i>Yay</i>".
-        System.out.println(JavaStringExercises.makeTags("b","Bold"));
+        System.out.println(JavaStringExercises.makeTags("b", "Bold"));
         //Given a string, return true if the first 2 chars in the string also appear at the end of the string, such as with "edited".
         System.out.println(JavaStringExercises.frontAgain("e"));
         //Given a string, if a length 2 substring appears at both its beginning and end, return a string without the substring at the beginning, so "HelloHe" yields "lloHe".
@@ -66,7 +66,7 @@ public class Main {
         System.out.println(JavaStringExercises.withoutX("xHix"));
         //Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside.
         // The strings will not be the same length, but they may be empty (length 0).
-        System.out.println(JavaStringExercises.comboString("Salut","prietene"));
+        System.out.println(JavaStringExercises.comboString("Salut", "prietene"));
         //Given a string, return a "rotated right 2" version where the last 2 chars are moved to the start. The string length will be at least 2.
         System.out.println(JavaStringExercises.right2("Bliaka"));
         //Given a string of even length, return a string made of the middle two chars, so the string "string" yields "ri". The string length will be at least 2.
