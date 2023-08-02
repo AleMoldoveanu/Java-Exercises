@@ -28,5 +28,16 @@ public class Main {
         //more20(21) → true
         //more20(22) → true
         System.out.println(JavaLogicExercises.more20(62));
+        //Given a non-negative number "num", return true if num is within 2 of a multiple of 10.
+        //nearTen(12) → true
+        //nearTen(17) → false
+        //nearTen(19) → true
+        System.out.println(JavaLogicExercises.nearTen(11));
+        //We are having a party with amounts of tea and candy. Return the int outcome of the party encoded as 0=bad, 1=good, or 2=great.
+        //A party is good (1) if both tea and candy are at least 5. However, if either tea or candy is at least double the amount of the other one, the party is great (2).
+        //However, in all cases, if either tea or candy is less than 5, the party is always bad (0).
+        System.out.println(JavaLogicExercises.teaParty(6,7));
+        //Given three ints, a b c, return true if it is possible to add two of the ints to get the third.
+        System.out.println(JavaLogicExercises.twoAsOne(9, 5, 5));
     }
 }

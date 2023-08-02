@@ -40,8 +40,29 @@ public class JavaLogicExercises {
             }
         }
     }
+
     public static boolean more20(int n) {
         return (n % 20 == 1 || n % 20 == 2);
+    }
+
+    public static boolean nearTen(int num) {
+        return (num % 10 <= 2 || num % 10 >= 8);
+    }
+    public static int teaParty(int tea, int candy) {
+        if (tea < 5 || candy < 5){
+            return 0;
+        } else if (tea >= 2 * candy || candy >= 2 * tea){
+            return 2;
+        } else {
+            return 1;
+        }
+    }
+    public static boolean twoAsOne(int a, int b, int c) {
+        if (a + b == c){
+            return true;
+        } else if ( b + c == a){
+            return true;
+        } else return a + c == b;
     }
 
 }
