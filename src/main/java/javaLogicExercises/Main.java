@@ -39,5 +39,49 @@ public class Main {
         System.out.println(JavaLogicExercises.teaParty(6,7));
         //Given three ints, a b c, return true if it is possible to add two of the ints to get the third.
         System.out.println(JavaLogicExercises.twoAsOne(9, 5, 5));
+        //Given three ints, a b c, return true if two or more of them have the same rightmost digit.
+        //The ints are non-negative. Note: the % "mod" operator computes the remainder, e.g. 17 % 10 is 7.
+        //lastDigit(23, 19, 13) → true
+        //lastDigit(23, 19, 12) → false
+        //lastDigit(23, 19, 3) → true
+        System.out.println(JavaLogicExercises.lastDigit(22, 46,51));
+        //Given two int values, return whichever value is larger.
+        //However if the two values have the same remainder when divided by 5, then the return the smaller value.
+        //However, in all cases, if the two values are the same, return 0.
+        //maxMod5(2, 3) → 3
+        //maxMod5(6, 2) → 6
+        //maxMod5(3, 2) → 3
+        System.out.println(JavaLogicExercises.maxMod5(5,6 ));
+        //You have a blue lottery ticket, with ints a, b, and c on it.
+        //This makes three pairs, which we'll call ab, bc, and ac.
+        //Consider the sum of the numbers in each pair. If any pair sums to exactly 10, the result is 10.
+        //Otherwise if the ab sum is exactly 10 more than either bc or ac sums, the result is 5. Otherwise the result is 0.
+        //blueTicket(9, 1, 0) → 10
+        //blueTicket(9, 2, 0) → 0
+        //blueTicket(6, 1, 4) → 10
+        System.out.println(JavaLogicExercises.blueTicket(5, 10, 30));
+        //You and your date are trying to get a table at a restaurant.
+        //The parameter "you" is the stylishness of your clothes, in the range 0..10, and "date" is the stylishness of your date's clothes.
+        //The result getting the table is encoded as an int value with 0=no, 1=maybe, 2=yes. If either of you is very stylish, 8 or more, then the result is 2 (yes).
+        //With the exception that if either of you has style of 2 or less, then the result is 0 (no). Otherwise the result is 1 (maybe).
+        System.out.println(JavaLogicExercises.dateFashion(9,7));
+        //Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are forbidden, so in that case just return 20.
+        System.out.println(JavaLogicExercises.sortaSum(19, 0));
+        //Given a number n, return true if n is in the range 1..10, inclusive.
+        // Unless outsideMode is true, in which case return true if the number is less or equal to 1, or greater or equal to 10.
+        System.out.println(JavaLogicExercises.in1To10(57, true));
+        //Return true if the given non-negative number is a multiple of 3 or 5, but not both.
+        System.out.println(JavaLogicExercises.old35(55));
+        //Given 2 ints, a and b, return their sum.
+        //However, "teen" values in the range 13..19 inclusive, are extra lucky. So if either value is a teen, just return 19.
+        System.out.println(JavaLogicExercises.teenSum(13, 9));
+        //Given a string str, if the string starts with "f" return "Fizz".
+        // If the string ends with "b" return "Buzz". If both the "f" and "b" conditions are true, return "FizzBuzz".
+        // In all other cases, return the string unchanged.
+        System.out.println(JavaLogicExercises.fizzString("adb"));
+        //Given three ints, a b c, return true if b is greater than a, and c is greater than b.
+        // However, with the exception that if "bOk" is true, b does not need to be greater than a.
+        System.out.println(JavaLogicExercises.inOrder(1, 2, 4, false));
+        //
     }
 }
