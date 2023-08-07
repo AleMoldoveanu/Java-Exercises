@@ -82,6 +82,17 @@ public class Main {
         //Given three ints, a b c, return true if b is greater than a, and c is greater than b.
         // However, with the exception that if "bOk" is true, b does not need to be greater than a.
         System.out.println(JavaLogicExercises.inOrder(1, 2, 4, false));
-        //
+        //Given three ints, a b c, return true if one of them is 10 or more less than one of the others.
+        System.out.println(JavaLogicExercises.lessBy10(1, 25, 79));
+        //You have a red lottery ticket showing ints a, b, and c, each of which is 0, 1, or 2.
+        // If they are all the value 2, the result is 10. Otherwise if they are all the same, the result is 5.
+        // Otherwise so long as both b and c are different from a, the result is 1. Otherwise the result is 0.
+        System.out.println(JavaLogicExercises.redTicket(1, 2, 3));
+        //Given two ints, each in the range 10..99, return true if there is a digit that appears in both numbers, such as the 2 in 12 and 23.
+        System.out.println(JavaLogicExercises.shareDigit(10, 56));
+        //The squirrels in Palo Alto spend most of the day playing.
+        //In particular, they play if the temperature is between 60 and 90 (inclusive).
+        //Unless it is summer, then the upper limit is 100 instead of 90. Given an int temperature and a boolean isSummer, return true if the squirrels play and false otherwise.
+        System.out.println(JavaLogicExercises.squirrelPlay(85, true));
     }
 }

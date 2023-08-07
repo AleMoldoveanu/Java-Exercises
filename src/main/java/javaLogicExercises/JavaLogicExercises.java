@@ -159,6 +159,60 @@ public class JavaLogicExercises {
             return b > a && c > b;
         }
     }
+
+    public static boolean lessBy10(int a, int b, int c) {
+        if (a + 10 <= b  || a + 10 <= c) {
+            return true;
+        }
+        else if (b + 10 <= a || b + 10 <= c){
+            return true;
+        } else if (c + 10 <= a || c + 10 <= b){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public static int redTicket(int a, int b, int c) {
+        if ( a== 2 && b == 2 && c == 2){
+            return 10;
+        } else if (a == b && b == c) {
+            return 5;
+        } else if (b != a && c !=a){
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+    public static boolean shareDigit(int a, int b) {
+        if (a < 10 || a > 99 || b < 10 || b > 99){
+            throw new IllegalArgumentException ("Numbers must be in the range 10 to 99.");
+        }
+        int num1Digit1 = a % 10;
+        int num1Digit2 = a / 10;
+        int num2Digit1 = b % 10;
+        int num2Digit2 = b / 10;
+        return num1Digit1 == num2Digit1 || num1Digit1 == num2Digit2 || num1Digit2 == num2Digit1 || num1Digit2 == num2Digit2;
+    }
+    public static boolean squirrelPlay(int temp, boolean isSummer) {
+        if (!isSummer && temp >= 60 && temp <= 90){
+            return true;
+        } else if (isSummer && temp >=60 && temp <= 100){
+            return true;
+        } else return false;
+    }
+    public static String alarmClock(int day, boolean vacation) {
+        if (!vacation && day >= 1 || day <= 5){
+            return "7:00";
+        } else if (!vacation && day == 0 || day == 6){
+            return "10:00";
+        } else if (vacation && day >=1 || day <=5){
+            return "10:00";
+        } else if (vacation && day == 0 || day ==6){
+            return "off";
+        }
+    }
+
+
 }
 
 
