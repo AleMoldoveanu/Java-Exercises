@@ -1,5 +1,7 @@
 package javaLogicExercises;
 
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
         //When squirrels get together for a party, they like to have cigars.
@@ -94,5 +96,35 @@ public class Main {
         //In particular, they play if the temperature is between 60 and 90 (inclusive).
         //Unless it is summer, then the upper limit is 100 instead of 90. Given an int temperature and a boolean isSummer, return true if the squirrels play and false otherwise.
         System.out.println(JavaLogicExercises.squirrelPlay(85, true));
+        //Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean indicating if we are on vacation, return a string of the form "7:00" indicating when the alarm clock should ring.
+        //Weekdays, the alarm should be "7:00" and on the weekend it should be "10:00".
+        //Unless we are on vacation -- then on weekdays it should be "10:00" and weekends it should be "off".\
+        System.out.println(JavaLogicExercises.alarmClock(4,false));
+        //We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of 11. Return true if the given non-negative number is special.
+        System.out.println(JavaLogicExercises.specialEleven(23));
+        //Return true if the given non-negative number is 1 or 2 less than a multiple of 20. So for example 38 and 39 return true, but 40 returns false.
+        System.out.println(JavaLogicExercises.less20(25));
+        //Your cell phone rings. Return true if you should answer it.
+        //Normally you answer, except in the morning you only answer if it is your mom calling.
+        //In all cases, if you are asleep, you do not answer.
+        System.out.println(JavaLogicExercises.answerCell(false, true, true));
+        //Given an int n, return the string form of the number followed by "!". So the int 6 yields "6!".
+        // Except if the number is divisible by 3 use "Fizz" instead of the number, and if the number is divisible by 5 use "Buzz", and if divisible by both 3 and 5, use "FizzBuzz".
+        System.out.println(JavaLogicExercises.fizzString2(5));
+        //Given three ints, a b c, return true if they are in strict increasing order, such as 2 5 11, or 5 6 7, but not 6 5 7 or 5 5 7.
+        //However, with the exception that if "equalOk" is true, equality is allowed, such as 5 5 7 or 5 5 5.
+        System.out.println(JavaLogicExercises.inOrderEqual(1,2,3, false));
+        //Return the sum of two 6-sided dice rolls, each in the range 1..6.
+        //However, if noDoubles is true, if the two dice show the same value, increment one die to the next value, wrapping around to 1 if its value was 6.
+        System.out.println(JavaLogicExercises.withoutDoubles(2 ,3,true));
+        //You have a green lottery ticket, with ints a, b, and c on it.
+        //If the numbers are all different from each other, the result is 0. If all of the numbers are the same, the result is 20.
+        // If two of the numbers are the same, the result is 10.
+        System.out.println(JavaLogicExercises.greenTicket(1,2,3));
+        //Given 2 non-negative ints, a and b, return their sum, so long as the sum has the same number of digits as a.
+        //If the sum has more digits than a, just return a without b.
+        // Note: one way to compute the number of digits of a non-negative int n is to convert it to a string with String.valueOf(n) and then check the length of the string.)
+        System.out.println(JavaLogicExercises.sumLimit(2,56));
+
     }
 }

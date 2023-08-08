@@ -2,13 +2,9 @@ package javaLogicExercises;
 
 public class JavaLogicExercises {
     public static boolean cigarParty(int cigars, boolean isWeekend) {
-        if (isWeekend == true && cigars >= 40) {
+        if (isWeekend && cigars >= 40) {
             return true;
-        } else if (isWeekend == false && cigars >= 40 && cigars <= 60) {
-            return true;
-        } else {
-            return false;
-        }
+        } else return !isWeekend && cigars >= 40 && cigars <= 60;
     }
 
     public static boolean love6(int a, int b) {
@@ -127,13 +123,9 @@ public class JavaLogicExercises {
     public static boolean old35(int n) {
         if (n % 3 == 0 && n % 5 == 0) {
             return false;
-        } else if (n % 3 == 0 && n % 5 != 0) {
+        } else if (n % 3 == 0) {
             return true;
-        } else if (n % 5 == 0 && n % 3 != 0) {
-            return true;
-        } else {
-            return false;
-        }
+        } else return n % 5 == 0;
     }
 
     public static int teenSum(int a, int b) {
@@ -143,17 +135,19 @@ public class JavaLogicExercises {
             return a + b;
         }
     }
+
     public static String fizzString(String str) {
-        if(str.startsWith("f") && str.endsWith("b")){
+        if (str.startsWith("f") && str.endsWith("b")) {
             return "FizzBuzz";
-        }else if (str.startsWith("f")){
+        } else if (str.startsWith("f")) {
             return "Fizz";
-        } else if (str.endsWith("b")){
+        } else if (str.endsWith("b")) {
             return "Buzz";
         } else return str;
     }
+
     public static boolean inOrder(int a, int b, int c, boolean bOk) {
-        if (bOk){
+        if (bOk) {
             return c > b;
         } else {
             return b > a && c > b;
@@ -161,31 +155,28 @@ public class JavaLogicExercises {
     }
 
     public static boolean lessBy10(int a, int b, int c) {
-        if (a + 10 <= b  || a + 10 <= c) {
+        if (a + 10 <= b || a + 10 <= c) {
             return true;
-        }
-        else if (b + 10 <= a || b + 10 <= c){
+        } else if (b + 10 <= a || b + 10 <= c) {
             return true;
-        } else if (c + 10 <= a || c + 10 <= b){
-            return true;
-        } else {
-            return false;
-        }
+        } else return c + 10 <= a || c + 10 <= b;
     }
+
     public static int redTicket(int a, int b, int c) {
-        if ( a== 2 && b == 2 && c == 2){
+        if (a == 2 && b == 2 && c == 2) {
             return 10;
         } else if (a == b && b == c) {
             return 5;
-        } else if (b != a && c !=a){
+        } else if (b != a && c != a) {
             return 1;
         } else {
             return 0;
         }
     }
+
     public static boolean shareDigit(int a, int b) {
-        if (a < 10 || a > 99 || b < 10 || b > 99){
-            throw new IllegalArgumentException ("Numbers must be in the range 10 to 99.");
+        if (a < 10 || a > 99 || b < 10 || b > 99) {
+            throw new IllegalArgumentException("Numbers must be in the range 10 to 99.");
         }
         int num1Digit1 = a % 10;
         int num1Digit2 = a / 10;
@@ -193,25 +184,94 @@ public class JavaLogicExercises {
         int num2Digit2 = b / 10;
         return num1Digit1 == num2Digit1 || num1Digit1 == num2Digit2 || num1Digit2 == num2Digit1 || num1Digit2 == num2Digit2;
     }
+
     public static boolean squirrelPlay(int temp, boolean isSummer) {
-        if (!isSummer && temp >= 60 && temp <= 90){
+        if (!isSummer && temp >= 60 && temp <= 90) {
             return true;
-        } else if (isSummer && temp >=60 && temp <= 100){
-            return true;
-        } else return false;
+        } else return isSummer && temp >= 60 && temp <= 100;
     }
+
     public static String alarmClock(int day, boolean vacation) {
-        if (!vacation && day >= 1 || day <= 5){
-            return "7:00";
-        } else if (!vacation && day == 0 || day == 6){
-            return "10:00";
-        } else if (vacation && day >=1 || day <=5){
-            return "10:00";
-        } else if (vacation && day == 0 || day ==6){
-            return "off";
+        if (!vacation) {
+            if (day > 0 && day < 6) {
+                return "7:00";
+            } else return "10:00";
+        } else {
+            if (day > 0 && day < 6) {
+                return "10:00";
+            } else return "off";
         }
     }
 
+    public static boolean specialEleven(int n) {
+        return n % 11 == 0 || n % 11 == 1;
+    }
+
+    public static boolean less20(int n) {
+        return n % 20 == 18 || n % 20 == 19;
+    }
+
+    public static boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+        if (isMorning && isMom && !isAsleep) {
+            return true;
+        } else if (!isMorning && !isMom && !isAsleep) {
+            return true;
+        } else if (!isMorning && isMom && !isAsleep) {
+            return true;
+        } else if (isMorning && isMom) {
+            return false;
+        } else if (isMorning && isAsleep) {
+            return false;
+        } else if (!isMorning && !isMom) {
+            return false;
+        }
+        return false;
+    }
+
+    public static String fizzString2(int n) {
+        if (n % 3 == 0 && n % 5 == 0) {
+            return "FizzBuzz" + "!";
+        } else if (n % 5 == 0) {
+            return "Buzz" + "!";
+        } else if (n % 3 == 0) {
+            return "Fizz" + "!";
+        } else {
+            return n + "!";
+        }
+    }
+
+    public static boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+        if (equalOk){
+            return a <= b && b <= c;
+        } else {
+            return a < b && b < c;
+        }
+    }
+
+    public static int withoutDoubles(int die1, int die2, boolean noDoubles) {
+        if (noDoubles && die1 == die2){
+            die1 = (die1 % 6) + 1;
+        } return die1 + die2;
+    }
+    public static int greenTicket(int a, int b, int c) {
+        if (a == b && b == c){
+            return 20;
+        } else if (a == b || b == c || a == c){
+            return 10;
+        } else {
+            return 0;
+        }
+    }
+    public static int sumLimit(int a, int b) {
+        int sum = a + b;
+        int numDigitsA = String.valueOf(a).length();
+        int numDigitsSum = String.valueOf(sum).length();
+        if (numDigitsSum == numDigitsA){
+            return sum;
+        } else {
+            return a;
+        }
+    }
 
 }
 
