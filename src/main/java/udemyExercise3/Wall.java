@@ -48,6 +48,6 @@ public class Wall {
 
     public double getArea() {
         return height * width;
-
+    }
 
 }
